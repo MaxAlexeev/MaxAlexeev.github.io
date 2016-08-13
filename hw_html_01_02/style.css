@@ -1,0 +1,32 @@
+body{
+  background-color: #efefef;
+  }
+
+div.wrapper {
+  width: 515px;
+  height: 750px;
+background-color: white;
+margin: 0 auto;
+padding: 6px 30px 30px 30px;
+font-size: 16px;
+box-shadow: 0px 0px 4px 0px rgba(0,0,10,0.75);
+}
+
+div{
+  background-color: white;
+  border-bottom: 2px solid lightgrey;
+  margin: 10px 20px 10px 20px;
+  padding: 10px;
+}
+
+div.box1{
+padding: 0px;
+margin: 0px;
+border: none;
+}
+
+div.box2{
+  padding: 0px;
+  margin-left: 30px;
+  border: none;
+}
