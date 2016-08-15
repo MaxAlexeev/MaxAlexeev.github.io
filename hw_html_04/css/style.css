@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Tahoma, sans-serif;
+  background-size: 100% 100%;
+}
+body {
+  background-image: url(../img/strip.jpg);
+}
+.clearfix:after{
+  clear: both;
+  display: block;
+  content: "";
+}
+.wrapper{
+  margin: 0 auto;
+  width: 1000px;
+  background-color: white;
+  box-shadow: 0 0 10px #0b657d;
+}
+.header-top{
+  height: 176px;
+}
+.header-top p{
+  color: #128aa7;
+}
+.main-logo{
+  margin-left: 30px;
+  height: 100%;
+  margin-top: 15px;
+  height: 175px;
+}
+.header-right{
+  float: right;
+  height: 100px;
+  width: 320px;
+  margin-right: 32px;
+  }
+  .contacts{
+    float: right;
+    font-size: 11px;
+    padding-top: 10px;
+  }
+  .contacts p{
+    margin: 5px;
+  }
+  .flags{
+    float: right;
+    padding-top: 15px;
+  }
+  .flags li{
+    margin: 2px;
+    font-size: 10px;
+    display: inline-block;
+  }
+  .flags a:hover{
+    text-decoration: none;
+  }
+  .photo{
+    height: 240px;
+    background-image: url(../img/photo.jpg);
+  }
+.menu{
+  height: 30px;
+  width: 100%;
+  background-color: #333333;
+  box-shadow: 0 4px 4px 0 rgba(59,60,60,1);
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+  }
+.menu symbol{
+  font-size: 6px;
+  vertical-align : middle;
+}
+.menu li{
+  float: left;
+  width: 140px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.menu li ul{
+   display: none;
+   position: absolute;
+   left: 0;
+   top: 30px;
+   margin: 0;
+   width: 140px;
+   background: #2c2c2c;
+   border: 1px solid #000;
+}
+ .menu li ul li{
+   float: none;
+   display: block;
+}
+ .menu li:hover ul{
+   display: block;
+}
+ .container{
+   background-color: #ffffff;
+   height: 540px;
+   overflow: hidden;
+   font-size: 14px;
+   color: #7d837f;
+ }
+.container .bold{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 10px 0;
+}
+.container .info{
+  float: left;
+  width: 210px;
+  height: 100%;
+  background-color: #edeef0;
+  padding-left: 18px;
+}
+.container .news{
+  float: right;
+  width: 210px;
+  height: 100%;
+  background-color: #edeef0;
+  padding: 0 18px;
+}
+.footer{
+  height: 34px;
+  text-align: center;
+  color: #dee7ee;
+  font-size: 12px;
+  padding: 10px;
+}
+ul{
+  list-style: none;
+}
+li{
+  text-align : center;
+}
