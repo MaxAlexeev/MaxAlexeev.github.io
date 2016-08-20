@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-size: cover;
+  color: white;
+}
+.body {
+  font-family: "Helvetica Neue";
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../fonts/helveticaneue-thin-webfont.eot");
+    src: url("../fonts/helveticaneue-thin-webfont.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/helveticaneue-thin-webfont.woff2") format('woff2'),
+         url("./fonts/helveticaneue-thin-webfont.woff") format('woff'),
+         url("../fonts/helveticaneue-thin-webfont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.header {
+  height: 36px;
+  width: 100%;
+  background-color: #085494;
+}
+.header * {
+  line-height: 36px;
+  font-size: 14px;
+}
+.login {
+  float: right;
+  margin-right: 20px;
+  text-align: center;
+  width: 190px;
+  background: background: rgba(147,206,222,1);
+  background: -moz-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(46,122,196,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(46,122,196,1)));
+  background: -webkit-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(46,122,196,1) 100%);
+  background: -o-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(46,122,196,1) 100%);
+  background: -ms-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(46,122,196,1) 100%);
+  background: linear-gradient(to bottom, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(46,122,196,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#2e7ac4', GradientType=0 ));
+}
+.login a:hover{
+  text-decoration: none;
+}
+.offer{
+  margin 2px;
+  float: right;
+  height: 35px;
+  width: 145 px;
+  text-align: right;
+  padding: 0 17px 0 20px;
+  border-left: 1px solid deepskyblue;
+}
+.offer-image {
+  padding: 7px 10px 0 0;
+  float: left;
+}
+.offer a{
+  text-decoration: none;
+}
+.offer a:hover {
+  text-decoration: none;
+}
+.menu {
+  overflow: hidden;
+}
+.menu li {
+  float: right;
+}
+.menu a {
+  text-decoration: none;
+  padding: 9px 15px;
+  color: rgb(96, 181, 237);
+}
+.menu a:hover {
+  background-color: #4eabda;
+  color: white;
+}
+.wrapper {
+  height: 1028px;
+  width: 100%;
+  background-image: url(../img/background.jpg);
+}
+.input-form {
+  position: relative;
+  top: 215px;
+  margin: auto;
+  width: 560px;
+  height: 610px;
+}
+.input-form-header {
+  height: 62px;
+  margin-bottom: 2px;
+  background: rgba(35, 35, 35, 0.9);
+  font-size: 24px;
+  text-align: center;
+  line-height: 62px;
+}
+.input-form-content {
+background: rgba(35, 35, 35, 0.8);
+height: 550px;
+}
+.facebook {
+  display: block;
+  position: relative;
+  height: 36px;
+  width: 280px;
+  margin: auto;
+  padding-top: 36px;
+  text-align: center;
+  border: 2px white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.facebook-btn {
+  float: left;
+  margin-top: 1px;
+  border-right: 1px solid #4e69ac;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.facebook-lnk {
+  display: block;
+  height: 38px;
+  line-height: 200%;
+  background: #2d4476;
+  border-top: 1px solid #758ab7;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.facebook-lnk a:hover {
+  text-decoration: underline;
+}
+.ou {
+  height: 58px;
+  padding-top: 35px;
+  padding-left: 140px;
+}
+.form {
+ position: relative;
+ display: block;
+ margin: 0 auto;
+ width: 276px;
+ font-size: 14px;
+}
+.input {
+  width: 276px;
+  height: 34px;
+  font-size: 14px;
+  font-family: "Helvetica Neue", sans-serif;
+  text-indent: 20px;
+  background-color: #0f0f0f;
+  margin-bottom: 15px;
+  border: none;
+}
+.input:focus {
+  background: #1b5288;
+  outline: none;
+  box-shadow: 0 0 4px 2px #4a86af;
+  border-bottom: 1px solid #699bcd;
+}
+.checkbox {
+  margin-top: 10px;
+  padding:
+}
+.account-btn{
+  width: 152;
+  height: 36px;
+  margin-top: 20px;
+  background: background: rgba(197,230,252,1);
+background: -moz-linear-gradient(top, rgba(197,230,252,1) 0%, rgba(193,228,250,1) 1%, rgba(46,147,194,0.97) 38%, rgba(46,147,194,0.96) 50%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(197,230,252,1)), color-stop(1%, rgba(193,228,250,1)), color-stop(38%, rgba(46,147,194,0.97)), color-stop(50%, rgba(46,147,194,0.96)));
+background: -webkit-linear-gradient(top, rgba(197,230,252,1) 0%, rgba(193,228,250,1) 1%, rgba(46,147,194,0.97) 38%, rgba(46,147,194,0.96) 50%);
+background: -o-linear-gradient(top, rgba(197,230,252,1) 0%, rgba(193,228,250,1) 1%, rgba(46,147,194,0.97) 38%, rgba(46,147,194,0.96) 50%);
+background: -ms-linear-gradient(top, rgba(197,230,252,1) 0%, rgba(193,228,250,1) 1%, rgba(46,147,194,0.97) 38%, rgba(46,147,194,0.96) 50%);
+background: linear-gradient(to bottom, rgba(197,230,252,1) 0%, rgba(193,228,250,1) 1%, rgba(46,147,194,0.97) 38%, rgba(46,147,194,0.96) 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5e6fc', endColorstr='#2e93c2', GradientType=0 );
+border-radius: 3px;
+margin-left: 80px;
+margin-bottom: 20px;
+font-size: 12px;
+font-family: "Helvetica Neue"
+}
+.terms {
+  width: 320px;
+  font-size: 10px;
+  font: #cccccc;
+  text-align: center;
+  margin-left: -25px;
+}
