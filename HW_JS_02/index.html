@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HW_JS_02</title>
+    </head>
+
+    <body>
+    <script type="text/javascript">
+    var arr = []; //создание пустого массива
+
+    for (var i = 0; i < 5; i++) {
+        arr.push(prompt('Add Login No. ' + (i+1)));
+    } //заполнение массива
+
+    var userName = prompt('Enter your Login'); //ввод имени
+
+    var rightName = false; //запрет всех имён
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == userName) {
+            rightName = true;
+            alert('Welcome, ' + userName + '! Nice to see you, bunny ;)');
+            break;
+        }
+    } //условие входа по правильному имени
+
+    if (!rightName) {
+        alert('Ooops.. Login is uncorrect! Try again..');
+    } //отмена входа по неправильному имени
+
+    </script>
+    </body>
+</html>
