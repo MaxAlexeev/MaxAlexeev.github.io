@@ -1,0 +1,31 @@
+body {
+  background: #f7f7f7;
+}
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  height: 650px;
+  background: #fff;
+  border: 1px solid black;
+  padding-left: 70px;
+}
+h3 {
+  width: 50%;
+  text-align: center;
+  margin: 20px;
+}
+li:first-child {
+  margin-top: 30px;
+}
+button {
+  height: 45px;
+  margin-top: 30px;
+  border: 2px solid black;
+  background: #CEFCFA;
+  font-size: 16px;
+  font-weight: bold;
+}
+ol>li{
+  margin-top:10px;
+}
