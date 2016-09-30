@@ -1,0 +1,37 @@
+body {
+    background: #131313;
+    text-align: center;
+}
+
+#output {
+    height: auto;
+    width: auto;
+    background-color: #131313;
+    border: 1px solid #4DF958;
+}
+
+.neon-text {
+.box-sizing (content-box);
+    font: normal normal bold 72px/normal "Atomic Age", Helvetica, sans-serif;
+    color: rgba(83, 170, 49, 1);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 1px 1px 0 rgba(77, 249, 88, 1) , -1px -1px 0 rgba(77, 249, 88, 1) , 1px -1px 0 rgba(77, 249, 88, 1) , -1px 1px 0 rgba(77, 249, 88, 1);
+.transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+}
+
+button {
+    background-color: #131313;
+    border: 1px solid #00dc00;
+}
+
+hr {
+background-color: #000;
+width: 50%;
+}
+
+.off {
+    color: white;
+    text-shadow: none;
+}
