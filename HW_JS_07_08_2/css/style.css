@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.register {
+    width: 480px;
+    margin: 0 auto;
+    border: 2px solid #a1a1a1;
+    padding: 5px;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    text-shadow: 4px 4px 4px rgba(150, 150, 150, 0.62);
+}
+.firstname,
+.lastname,
+.address {
+    margin: 10px 0 10px 10px;
+}
+
+.lastname {
+    margin-left: 11px;
+}
+
+.address {
+    margin-left: 23px;
+}
+
+.button {
+    padding: 4px;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    padding: 10px;
+    background: #0A94FF;
+    border-radius: 6px;
+    color: #fff;
+    transition: 0.2s;
+    border: none;
+}
+
+.btn-res {
+    background: #0978CE;
+    transition: 0.2s;
+}
+
+.tooltip {
+    background: #fff;
+    margin-left: 5px;
+    text-align: center;
+    border: 1px solid #bbb;
+    font-size: 10px;
+    padding: 2px;
+    box-shadow: 0px 1px 2px 1px rgba(50, 50, 50, 0.5);
+}

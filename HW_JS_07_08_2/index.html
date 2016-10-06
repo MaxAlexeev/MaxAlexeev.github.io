@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HW_JS_7_8_2_Tooltip</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form class="register">
+        <fieldset>
+            <div>
+                <label for="firstname">Firstname:</label>
+                <input class="firstname" name="firstname">
+                <span class="tooltip">Please provide your firstname.</span>
+            </div>
+            <div>
+                <label for="lastname">Lastname:</label>
+                <input class="lastname" name="lastname">
+                <span class="tooltip">Please provide also your lastname.</span>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input class="address" name="address">
+                <span class="tooltip">Your home or work address.</span>
+            </div>
+        </fieldset>
+    </form>
+    <div class="button">
+        <input type="button" class="btn" value="Show help">
+    </div>
+</body>
+</html>
