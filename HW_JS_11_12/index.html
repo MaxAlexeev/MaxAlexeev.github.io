@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW_JS_11_12_jQuery_carousel_plugin_and_account_tmpl</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/jquery.carousel.js"></script>
+        <script src="js/templ.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+         <div class="page__block page__slider">
+                <div class="page__top">
+                    <div class="slider">
+                        <ul class="slider-list">
+                            <li class="slider-element">
+                                <img src="img/touran1_big.jpg" alt="">
+                                <h3 class="slider-header">Touran 1</h3>
+                            </li>
+                            <li class="slider-element">
+                                <img src="img/touran2_big.jpg" alt="">
+                                <h3 class="slider-header">Touran 2</h3>
+                            </li>
+                            <li class="slider-element">
+                                <img src="img/touran3_big.jpg" alt="">
+                                <h3 class="slider-header">Touran 3</h3>
+                            </li>
+                            <li class="slider-element">
+                                <img src="img/touran4_big.jpg" alt="">
+                                <h3 class="slider-header">Touran 4</h3>
+                            </li>
+                            <li class="slider-element">
+                                <img src="img/touran5_big.jpg" alt="">
+                                <h3 class="slider-header">Touran 5</h3>
+                            </li>
+                        </ul>
+                        <a href="" class="arrow-left">&lsaquo;</a>
+                        <a href="" class="arrow-right">&rsaquo;</a>
+                    </div>
+                 </div>
+            </div>
+            <script type="text/html" id='author'>
+                <main>
+                    <div class="header">
+                        <figure>
+                            <div class="page__photo">
+                                <div class="owner__photo">
+                                    <%= header[0].avatar %>
+                                </div>
+                                <div class="page__action">
+                                    <div class="page__action__left">
+                                        <a href="#edit" class="flat__button"><%= header[1].button %></a>
+                                    </div>
+                                    <div class="page__action__right">
+                                        <a href="#stats" class="stats__button"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="page__block">
+                            <div class="page__top">
+                                <a href="#" alt="Maxim Alexeev" title="Maxim Alexeev">
+                                <h1><%= header[2].name %></h1>
+                                <h1><%= header[2].surname %></h1>
+                                </a>
+                                <p><%= header[3].from %></p>
+                                <hr size="1">
+                                <div class="profile__short">
+                                    <% for (var i = 4; i < header.length; i++) { %>
+                                        <div>
+                                            <span class="label"><%= header[i].title %></span>
+                                            <span class="labeled"><%= header[i].labeled %></span>
+                                        </div>
+                                    <% } %>
+                                </div>
+                                <div class="full__info">
+                                    <a id="show" href="#show"><%= info[6].show %></a>
+                                </div>
+		                        <div class="profile__more__info">
+                                    <div class="contact__info">
+                                        <h3 class="contact__heading">
+                                            <%= info[0].heading %>
+                                        </h3>
+		                            	<p class="page__edit__button">
+                                            <a href="#edit"><%= info[6].edit %></a>
+                                        </p>
+                                        <% for (var i = 2; i < info.length; i++) { %>
+                                            <div>
+                                                <span class="label">
+                                                    <%= info[i].title %>
+                                                </span>
+                                                <span class="labeled">
+                                                    <%= info[i].labeled %>
+                                                </span>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                    <div class="profile__info">
+                                        <h3 class="profile__heading">
+                                            <%= info[1].heading %>
+                                        </h3>
+                				        <p class="info__edit__button">
+                                            <a href="#edit"><%= info[6].edit %></a>
+                                        </p>
+                                        <section class="question">
+                                            <article>
+                                                <h3><%= main[0].title %></h3>
+                                                <% for (var i = 0; i < main.length; i++) { %>
+                                                    <%= main[i].answer %>
+                                                <% } %>
+                                            </article>
+                                        </section>
+			                        </div>
+                                </div>
+                                <hr size="1">
+                                <div class="counts__module">
+                                    <% for (var i = 0; i < counts.length; i++) { %>
+                                    <a class="page__counter" href="#">
+                                        <div class="count"><%= counts[i].count %></div>
+                                        <div class="label"><%= counts[i].title %></div>
+                                    </a>
+                                    <% } %>
+                                </div>
+		                    </div>
+                        </div>
+                    </div>
+                    <div class="page__block">
+                        <div class="page__top">
+                            <ul class="wall__tabs">
+                                <li class="ui__tab">
+                                    <a href="#all-post"><%= feedback[0].tab %></a>
+                                </li>
+                                <li class="ui__tab">
+                                    <a href="#my-post"><%= feedback[1].tab %></a>
+                                </li>
+                            </ul>
+                            <hr size="1">
+                            <div class="post__header">
+                                <div class="post__image">
+                                    <%= wall[0].user %>
+                                </div>
+                                <div class="post__header__info">
+                                    <div class="post__author">
+                                        <%= header[2].name %>
+                                        <%= header[2].surname %>
+                                    </div>
+                                    <div class="post__date">
+                                        <%= wall[0].date %>
+                                    </div>
+                                </div>
+                                <div class="actions__menu__icons"></div>
+                                    <ul class="actions__menu">
+                                        <li>
+                                            <a class="actions__menu__item delete" href="#delete">
+                                                <%= feedback[2].delete %>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="actions__menu__item" href="#pin">
+                                                <%= feedback[2].pin %>
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="post__content">
+                                <div class="wall__text">
+                                    <div class="wall__post__text">
+                                        <%= wall[0].text %>
+                                    </div>
+                                    <div class="post__thumbed__media">
+                                        <%= wall[0].thumbed %>
+                                    </div>
+                                    <hr size="1">
+                                    <div class="post__like">
+                                        <i class="post__like__icon"></i>
+                                        <span class="post__like__link"><%= wall[0].like %></span>
+                                        <span class="post__like__count"><%= wall[0].lCount %></span>
+                                    </div></a>
+                                    <div class="post__share">
+                                        <i class="post__share__icon"></i>
+                                        <span class="post__share__link"><%= wall[0].share %></span>
+                                        <span class="post__share__count"><%= wall[0].sCount %></span>
+                                    </div>
+                                    <span class="reply__link__wrap">
+                                        <a class="reply__link"><%= wall[0].comment %></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% for (var i = 1; i < wall.length; i++) { %>
+                        <div class="page__block">
+                            <div class="page__top">
+                                <div class="post__header">
+                                    <div class="post__image">
+                                        <%= wall[i].user %>
+                                    </div>
+                                    <div class="post__header__info">
+                                        <div class="post__author">
+                                            <%= header[2].name %>
+                                            <%= header[2].surname %>
+                                        </div>
+                                        <div class="post__date">
+                                            <%= wall[i].date %>
+                                        </div>
+                                    </div>
+                                    <div class="actions__menu__icons last__post_icons"></div>
+                                        <ul class="actions__menu last__actions__menu">
+                                            <li>
+                                                <a class="actions__menu__item delete" href="#delete">
+                                                    <%= feedback[2].delete %>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="actions__menu__item" href="#pin">
+                                                    <%= feedback[2].pin %>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                </div>
+                                <div class="post__content">
+                                    <div class="wall__text">
+                                        <div class="wall__post__text">
+                                            <%= wall[i].text %>
+                                        </div>
+                                        <div class="post__thumbed__media">
+                                            <%= wall[i].thumbed %>
+                                        </div>
+                                        <hr size="1">
+                                        <div class="post__like">
+                                            <i class="post__like__icon"></i>
+                                            <span class="post__like__link"><%= wall[i].like %></span>
+                                            <span class="post__like__count"><%= wall[i].lCount %></span>
+                                        </div>
+                                        <div class="post__share">
+                                            <i class="post__share__icon"></i>
+                                            <span class="post__share__link"><%= wall[i].share %></span>
+                                            <span class="post__share__count"><%= wall[i].sCount %></span>
+                                        </div>
+                                        <span class="reply__link__wrap">
+                                            <a class="reply__link"><%= wall[i].comment %></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </main>
+            </script>
+        </div>
+    </body>
+</html>
