@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HW_JS_13_14</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <script type="text/template" id="test">
+  <div class="wrapper">
+  <header><%= header %></header>
+  <form action="#" method="POST">
+    <ul>
+      <% for (var i=0;i<questions.length;i++) {  %>
+      <li><h3><%= questions[i].title %></h3>
+      <% for (var j=0; j<questions[i].answers.length;j++){ %>
+      <p>
+      <input type="checkbox" name="<%= questions[i].checkName %>" id="<%= questions[i].id[j]%>"/>
+      <label for="<%= questions[i].id[j] %>"><%= questions[i].answers[j] %></label>
+     </p>
+     <% }; %>
+     </li>
+     <% };%>
+    </ul>
+   <button>Check results</button>
+  </form>
+  </div>
+  </script>
+  <script src="js/jquery.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

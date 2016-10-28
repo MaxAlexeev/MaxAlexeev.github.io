@@ -1,0 +1,68 @@
+body {
+  background: #eee;
+}
+.wrapper {
+  padding-top: 40px;
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  height: 640px;
+  background: #fff;
+  border: 1px solid grey;
+  padding-left: 70px;
+}
+h3 {
+  width: 50%;
+  text-align: center;
+  margin: 20px;
+}
+ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+li:first-child {
+  margin-top: 30px;
+}
+button {
+  height: 44px;
+  margin-top: 20px;
+  background: #ccc;
+  font-size: 16px;
+  font-weight: bold;
+}
+ol>li{
+  margin-top:10px;
+}
+.modal{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:500px;
+  height:300px;
+  margin:-150px 0 0 -250px;
+  padding:20px;
+  background:#fff;
+  border:1px solid #bbb;
+  border-radius:5px;
+  box-shadow: 0 0 10px #bbb, 0 0 10px #bbb;
+}
+.modal button{
+  margin: 70px auto 0;
+  border:1px solid grey;
+  border-radius: 2px;
+  background: #aaa;
+  color: #fff;
+  font-size: 14px;
+}
+.modal p{
+  margin:10px;
+  padding:5px;
+  border-radius:4px;
+  font-size:14px;
+}
+.correct{
+  background: lime;
+}
+.incorrect{
+  background: orange;
+}
