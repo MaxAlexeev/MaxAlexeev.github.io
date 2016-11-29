@@ -1,62 +1,76 @@
-"use strict";
+'use strict';
 
-var obj = {
+$(function() {
 
-header: "ТЕСТ ПО ПРОГРАММИРОВАНИЮ",
+	var data = {
+		header: 'Тест по программированию',
+		questions: [{
+			question: 'Вопрос №1',
+			name: 'question_1',
+			id:['1','2','3'],
+			answers: ['Вариант ответа № 1','Вариант ответа № 2', 'Вариант ответа № 3'],
+			correct: 1
+		},
+		{
+			question: 'Вопрос №2',
+			name: 'question_2',
+			id:['4','5','6'],
+			answers: ['Вариант ответа № 1','Вариант ответа № 2', 'Вариант ответа № 3'],
+			correct: 5
+		},
+		{
+			question: 'Вопрос №3',
+			name: 'question_3',
+			id:['7','8','9'],
+			answers: ['Вариант ответа № 1','Вариант ответа № 2', 'Вариант ответа № 3'],
+			correct: 9
+		}],
+		button: 'Ок'
+	};
 
-questions:[
-    {title:"Вопрос №1",
-      chekboxName:["one","two","three"],
-      id:["1","2","3"],
-      answers:["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"],
-      correct:3
-    },
-    {title:"Вопрос №2",
-      chekboxName:["one","two","three"],
-     id:["1","2","3"],
-      answers:["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"],
-      correct:2
-    },
-    {title:"Вопрос №3",
-      chekboxName:["one","two","three"],
-      id:["1","2","3"],
-      answers:["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"],
-      correct:1
-    }
-    ]
-  };
+var template = $('#test').html();
+var content = tmpl(template, data);
+$('.wrapper').append(content);
 
-var sObj = JSON.stringify(obj);
-localStorage.setItem("object", sObj);
+localStorage.setItem('programming_test', JSON.stringify(data));
+var getTest = JSON.parse(localStorage.getItem('programming_test'));
 
-var retObj = JSON.parse(localStorage.getItem("object"));
-var html = $('#test').html();
-var content = tmpl(html,retObj);
-$("body").append(content);
+function test() {
+	var totalQuestions = 3;
+	var result = 0;
+	var answerChecked = $('input:checked');
+	var correctAnswer = [];
 
-function showModal(e){
-     e.preventDefault();
-     var modal = $("<div class='modal'></div>");
-     var result = 0;
-     var answer = $('input:checked');
-     var correct = [];
+	for (var i = 0; i < getTest.questions.length; i++) {
+		correctAnswer[i] = getTest.questions[i].correct;
+		if ($(answerChecked[i]).attr('id') == correctAnswer[i]) {
+			result ++;
+    	}
+	}
 
-     for (var i=0; i<retObj.questions.length;i++){
-          correct[i] = retObj.questions[i].correct;
-          if($(answer[i]).attr('id')==correct[i]){
-          result+=1;
-          modal.append('<p class="correct">Ответ на '+ (i+1)+' вопрос правильный</p>');
-     } else {
-          modal.append('<p class="incorrect">Ответ на ' + (i+1) + ' вопрос неправильный</p>');
-     }
- }
-modal.append('<button>Повторить тест</button>');
-$('body').append(modal);
+	if (result == getTest.questions.length) {
+		$('#modal-text').append('Тест пройден');
+	} else if (result == 0) {
+		$('#modal-text').append('Дайте ответы на все вопросы');
+	} else {
+		$('#modal-text').append('Тест не пройден. Ваш результат '+ result + ' из ' + totalQuestions);
+	}
+};
 
-$('button').one('click',function(e){
-     e.preventDefault();
-     modal.detach();
-     $('input').attr('checked', false);
-  })
- }
-$('button').on('click',showModal);
+$("#modal-launcher, #modal-background, #modal-close, #modal-try_again").on('click', function () {
+
+	$("#modal-background").toggleClass("active");
+	$('#modal-content').slideToggle(200);
+	$('#modal-text').empty();
+
+	$('#modal-try_again').one('click', function (e) {
+		e.preventDefault();
+		$('#modal-text').empty();
+		$('input').attr('checked', false);
+
+	});
+});
+
+$("#modal-launcher").on('click', test);
+
+});

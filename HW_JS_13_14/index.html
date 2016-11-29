@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HW_JS_13_14</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<title>HW_JS_13_14_2</title>
+	<link rel="stylesheet" href="css/reset.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="js/template.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
-  <script type="text/template" id="test">
-  <div class="wrapper">
-  <header><%= header %></header>
-  <form action="#" method="POST">
-    <ul>
-      <% for (var i=0;i<questions.length;i++) {  %>
-      <li><h3><%= questions[i].title %></h3>
-      <% for (var j=0; j<questions[i].answers.length;j++){ %>
-      <p>
-      <input type="checkbox" name="<%= questions[i].checkName %>" id="<%= questions[i].id[j]%>"/>
-      <label for="<%= questions[i].id[j] %>"><%= questions[i].answers[j] %></label>
-     </p>
-     <% }; %>
-     </li>
-     <% };%>
-    </ul>
-   <button>Check results</button>
-  </form>
-  </div>
-  </script>
-  <script src="js/jquery.js"></script>
-  <script src="js/template.js"></script>
-  <script src="js/script.js"></script>
+	<div class="wrapper">
+		<script type="text/template" id="test">
+			<h3 class="text-center"><%= header %></h3>
+			<ul class="questions">
+				<% for (var i = 0; i < questions.length; i ++) { %>
+				<h4><%= questions[i].question %></h4>
+				<% for (var k = 0; k < questions[i].answers.length; k++)  { %>
+				<li class="radio"><label for="<%= questions[i].id[k]  %>"><input type="radio" name="<%= questions[i].name %>" id="<%= questions[i].id[k] %>"><%= questions[i].answers[k] %></label>
+					<% }; %>
+				</li>
+				<% }; %>
+			</ul>
+			<button class="btn btn-primary btn-lg" id="modal-launcher"><%= button %></button>
+		</script>
+	</div>
+
+	<div id="modal-background"></div>
+
+	<div id="modal-content">
+		<div id="modal-text"></div>
+		<button class="btn btn-default" id="modal-close">Close</button>
+		<button class="btn btn-info" id="modal-try_again">Try again</button>
+	</div>
+
 </body>
 </html>
