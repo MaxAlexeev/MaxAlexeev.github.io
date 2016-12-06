@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework_JS_23_24_MVC_require</title>
+  <script data-main="js/app" src="js/require.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <script type="text/template" id="wrapper-template">
+    <div class="wrapper">
+      <ul class="item-list"></ul>
+      <div class="controlls">
+        <input type="text" class="item-value">
+        <button class="item-add">Add</button>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="list-template">
+    <% for (var i = 0; i<data.length; i++) {%>
+      <li><%= data[i] %>
+     <button data-value="<%= data[i] %>" class="item-delete">Delete</button>
+     <button data-value="<%= data[i] %>" class="item-edit">Edit</button>
+   </li>
+      <% }; %>
+  </script>
+
+</body>
+</html>
